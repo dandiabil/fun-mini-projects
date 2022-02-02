@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #1f1f1f;
+}
+
+section.kiri, section.kanan{
+    width: 45%;
+    position: absolute;
+    height: 90vh;
+    text-align: center;
+}
+
+section.kiri{
+    background-color: #e63946;
+    left: 5%;
+    border-bottom: 10px solid #F4F4F4;
+    border-left: 10px solid #F4F4F4;
+    border-top: 10px solid #F4F4F4;
+    border-radius: 50px 0px 0px 50px;
+}
+
+section.kanan{
+    background-color: rgb(39, 108, 235);
+    right: 5%;
+    border-radius: 0px 50px 50px 0px;
+    border-bottom: 10px solid #F4F4F4;
+    border-right: 10px solid #F4F4F4;
+    border-top: 10px solid #F4F4F4;
+}
+
+.player-score, .computer-score, .detail{
+    background-color: whitesmoke;
+    width: 200px;
+    height: 3em;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.container-player ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-player ul li{
+    list-style-type: none;
+}
+
+img{
+    width: 150px;
+    height: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.detail{
+    z-index: 1;
+}
+
+.detail p, .player-score p, .computer-score p{
+    text-align: center;
+    width: 100%;
+    padding-top: 6px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.container-player, .container-comp{
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.container-player section.atas{
+    margin-top: 50px;
+}
+
+.container-comp img{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 200px;
+}
+
+.container-player img:hover{
+    cursor: pointer;
+    animation: selected .5s ease forwards;
+}
+
+.container-player section.bawah{
+    margin-bottom: 50px;
+}
+
+@keyframes selected{
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: #a5a5a5;
+    }
+}
