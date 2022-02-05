@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Slider</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Color Slider</h1>
+      <h1>Color Slider</h1>
     </header>
 
     <main>
-        <h2>Find a color</h2>
-        <p>You can use the color slider on the right to find a certain color</p>
+      <h2>Find a color</h2>
+      <p>You can use the color slider on the right to find a certain color</p>
     </main>
 
     <div class="color-container">
-        <div class="color-display">
-            
-        </div>
+      <div class="color-display"></div>
 
-        <div class="color-slider">
-            <div class="merah">
-                <p>Red</p> 
-                <input type="range" name="merah" id="slider" min="1" max="255" value="1">
-            </div>
-            <div class="hijau">
-                <p>Green</p> 
-                <input type="range" name="hijau" id="slider" min="1" max="255" value="1">
-            </div>
-            <div class="biru">
-                <p>Blue</p> 
-                <input type="range" name="biru" id="slider" min="1" max="255" value="1">
-            </div>
-            <div class="reset"><p>Reset</p></div>
+      <div class="color-slider">
+        <div class="merah">
+          <p>Red</p>
+          <input
+            type="range"
+            name="merah"
+            id="slider"
+            min="1"
+            max="255"
+            value="1"
+          />
         </div>
+        <div class="hijau">
+          <p>Green</p>
+          <input
+            type="range"
+            name="hijau"
+            id="slider"
+            min="1"
+            max="255"
+            value="1"
+          />
+        </div>
+        <div class="biru">
+          <p>Blue</p>
+          <input
+            type="range"
+            name="biru"
+            id="slider"
+            min="1"
+            max="255"
+            value="1"
+          />
+        </div>
+        <div class="reset"><p>Reset</p></div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
