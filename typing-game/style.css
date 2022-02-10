@@ -5,10 +5,12 @@
 }
 
 .main-container {
+  background-color: #303235;
+  height: 100vh;
 }
 
 .header-container {
-  background-color: #b8c5d6;
+  background-color: #000000;
 }
 
 .header-container .logo {
@@ -16,12 +18,15 @@
   color: white;
   padding: 40px 20px;
   margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 12px;
+  text-align: center;
 }
 
 .sentence-display {
   width: 80vw;
-  margin: 0 auto;
-  background-color: #edf5fc;
+  margin: 50px auto;
+  background-color: #e5e5e5;
   border-radius: 24px;
   height: 20vh;
   padding: 20px 40px;
@@ -50,13 +55,8 @@
   padding: 10px;
   outline: none;
   border: 1px solid black;
-  border-radius: 20px;
+  border-radius: 14px;
   margin-right: 8px;
-}
-
-.input-container input:focus {
-  border: 3px solid black;
-  transition: 0.1s border;
 }
 
 .input-container button {
@@ -66,7 +66,7 @@
   font-size: 2em;
   width: 200px;
   cursor: pointer;
-  background-color: #272d2d;
+  background-color: #fca311;
   color: white;
   border-radius: 14px;
 }
@@ -74,4 +74,8 @@
 .input-container button:hover {
   background-color: #485555;
   border-radius: 14px;
+}
+
+.selected-word {
+  background-color: #fca311;
 }
