@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+
+.calculator-container {
+  flex: 1;
+  background-color: #a5a58d;
+}
+
+.history-container {
+  flex: 0.5;
+  background-color: white;
+}
+
+.calculator-body {
+  position: relative;
+  border-radius: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333d29;
+  width: fit-content;
+  max-height: 80vh;
+  padding: 20px;
+}
+
+.display-wrapper {
+  margin: 0 auto;
+  background-color: #e9f5db;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.display-wrapper p {
+  text-align: right;
+  font-family: "Pixeboy", sans-serif;
+  color: #333d29;
+}
+
+.btn-wrapper {
+  background-color: #414833;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-number-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70%;
+  column-gap: 5px;
+  row-gap: 10px;
+  margin-right: 5px;
+}
+
+.btn-operation-wrapper {
+  display: grid;
+  row-gap: 10px;
+  grid-template-rows: 80px 80px auto;
+}
+
+.btn {
+  width: 80px;
+  height: 80px;
+  background-color: #e9f5db;
+  cursor: pointer;
+}
+
+.btn p {
+  font-size: 22px;
+  color: #333d29;
+  position: relative;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.btn-operation:last-child {
+  height: 100%;
+}
+
+.display-wrapper .preview {
+  font-size: 20px;
+  color: #333d299d;
+  height: 20px;
+}
+
+.display-wrapper .value {
+  font-size: 40px;
+}
+
+.history-container {
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.history-container .header {
+  padding: 12px;
+  border-radius: 8px;
+  background: hsla(216, 41%, 79%, 1);
+  background: linear-gradient(
+    45deg,
+    hsla(216, 41%, 79%, 1) 0%,
+    hsla(214, 33%, 94%, 1) 50%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+.history-container .body {
+  max-height: 50vh;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: hsla(214, 33%, 94%, 1);
+}
+
+.list {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  width: fit-content;
+  padding: 8px 12px;
+  color: #f4f4f4;
+  border-radius: 8px;
+  background: hsla(333, 100%, 53%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(340, 80%, 69%, 1) 0%,
+    hsla(15, 93%, 71%, 1) 100%
+  );
+  margin-bottom: 10px;
+}
