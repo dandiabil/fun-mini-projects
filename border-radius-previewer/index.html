@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Previewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-wrapper">
+            <div class="left-container">
+                <div class="display-wrapper">
+                    <div class="rectangle"></div>
+                    <div class="slider-wrapper">
+                        <div class="top-slider">
+                            <div class="slider">
+                                <p>Top Left</p>
+                                <input type="range" value="0" id="top-left">
+                            </div>
+                            <div class="slider">
+                                <p>Top Right</p>
+                                <input type="range" value="0" id="top-right">
+                            </div>
+                        </div>
+                        <div class="bottom-slider">
+                            <div class="slider">
+                                <p>Bottom Right</p>
+                                <input type="range" value="0" id="bottom-left">
+                            </div>
+                            <div class="slider">
+                                <p>Bottom Left</p>
+                                <input type="range" value="0" id="bottom-right">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-wrapper">
+                        <div class="btn-random">
+                            <p>Random</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <p>Border Radius</p>
+                <p>Previewer.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
