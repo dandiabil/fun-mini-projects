@@ -1,14 +1,15 @@
-let timer = 1500;
 const btnStart = document.getElementById("start");
 const btnRestart = document.getElementById("restart");
 const timerContainer = document.querySelector(".time");
+
+let timer = 1500;
 let minutes = timer / 60 - 1;
 let seconds = 60;
 let tick;
 
-function start() {
-
-  createTimer();
+const start = () => {
+  btnStart.setAttribute("src", "./assets/pause_black_24dp.svg");
+  btnStart.setAttribute("alt", "pause");
 
   tick = setInterval(() => {
     seconds--;
@@ -18,49 +19,36 @@ function start() {
     }
     refreshUI();
   }, 1000);
-  
-  function refreshUI() {
-    const minute = document.querySelector(".minute");
-    const second = document.querySelector(".second");
-    minute.innerText = minutes;
-    second.innerText = seconds;
-  }
-}
+};
 
-function stop() {
+const refreshUI = () => {
+  const minute = document.querySelector(".minute");
+  const second = document.querySelector(".second");
+  minute.innerText = minutes;
+  second.innerText = seconds;
+};
+
+const pause = () => {
+  btnStart.setAttribute("src", "./assets/play_arrow_black_24dp.svg");
+  btnStart.setAttribute("alt", "start");
   clearInterval(tick);
-  createTimer();
-}
+};
 
-function createTimer() {
-  timerContainer.innerHTML = "";
-  const newMinute = document.createElement("p");
-  const newSecond = document.createElement("p");
-  const separator = document.createElement("p");
+const resetTimer = () => {
+  timerContainer.innerHTML = `<span class="minute"><p>25</p></span> <span class="separator"><p>:</p></span><span class="second"><p>00</p></span>`;
+  minutes = timer / 60 - 1;
+  seconds = 60;
+};
 
-  const minuteSpan = document.createElement("span");
-  const separatorSpan = document.createElement("span");
-  const secondSpan = document.createElement("span");
-
-  minuteSpan.classList.add("minute");
-  separatorSpan.classList.add("separator");
-  secondSpan.classList.add("second");
-  
-  newMinute.innerText = "25";
-  separator.innerText = ":";
-  newSecond.innerText = "00";
-  
-  minuteSpan.append(newMinute);
-  separatorSpan.append(separator);
-  secondSpan.append(newSecond);
-  
-  timerContainer.append(minuteSpan, separatorSpan, secondSpan);
-}
-
-btnStart.addEventListener("click", function () {
-  start();
+btnStart.addEventListener("click", (e) => {
+  console.log(e.target.alt);
+  if (e.target.alt === "start") return start();
+  pause();
 });
 
-btnRestart.addEventListener("click", function () {
-  stop();
+btnRestart.addEventListener("click", () => {
+  btnStart.setAttribute("src", "./assets/play_arrow_black_24dp.svg");
+  btnStart.setAttribute("alt", "start");
+  clearInterval(tick);
+  resetTimer();
 });
