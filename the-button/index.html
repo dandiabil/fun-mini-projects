@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BUTTON</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #90E5F0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .btn-container {
+            width: fit-content;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn-container:hover {
+            cursor: pointer;
+        }
+
+        .btn-top {
+            background-color: #f87b6a;
+            padding: 5px 10px;
+            border: 2px solid #bd3f2e;
+            border-radius: 8px;
+            font-size: 24px;
+            color: #A3210F;
+            transition: .5s;
+        }
+
+        .btn-top:active {
+            transform: translate(0em, 2em);
+        }
+
+        .btn-bottom {
+            background-color: #A3210F;
+            padding: 5px 10px;
+            border-radius: 8px;
+            position: relative;
+            height: 20px;
+            top: -10px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="btn-container">
+            <div class="btn-top">
+                Click Me
+            </div>
+            <div class="btn-bottom"></div>
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector('.btn-container');
+        const buttonTop = document.querySelector('.btn-top')
+
+        button.addEventListener('click', (e) => {
+            const random = () => Math.floor(Math.random() * 95)
+            button.style.top = `${random()}%`
+            button.style.left = `${random()}%`
+            console.log(random)
+            console.log(button.style.top, button.style.left)
+        })
+    </script>
+</body>
+
+</html>

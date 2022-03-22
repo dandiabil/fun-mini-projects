@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow Previewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="header">
+                <p class="left-text">Box Shadow</p>
+            </div>
+            <div class="input-wrapper">
+                <div class="input-group">
+                    <p>Fill Color</p>
+                    <input type="color" id="fill-color" value="#d1ebfd">
+                </div>
+                <div class="input-group">
+                    <p>Shadow Color</p>
+                    <input type="color" id="shadow-color">
+                </div>
+                <div class="input-group">
+                    <p>H-Shadow</p>
+                    <input type="range" value="0" min="-100" max="100" id="h-sh">
+                </div>
+                <div class="input-group">
+                    <p>V-Shadow</p>
+                    <input type="range" value="0" min="-100" max="100" id="v-sh">
+                </div>
+                <div class="input-group">
+                    <p>Blur Distance (Opt.)</p>
+                    <input type="range" value="0" max="100" id="blur-d">
+                </div>
+                <div class="input-group">
+                    <p>Spread Distance (Opt.)</p>
+                    <input type="range" value="0" min="-100" max="100" id="spread-d">
+                </div>
+                <!-- <div class="input-group">
+                    <p>Inset Shadow</p>
+                    <input type="checkbox" id="">
+                </div> -->
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="header">
+                <p class="right-text">Previewer</p>
+            </div>
+            <div class="display-wrapper">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
