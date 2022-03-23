@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4895ef;
+}
+
+header {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+header .title-page {
+  font-family: "Sansita", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 64px;
+}
+
+.interface-page .button-section {
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 70px;
+}
+
+.interface-page .button-start {
+  width: 100px;
+  height: 100px;
+  border-radius: 28px;
+  border: 5px solid #b5179e;
+  background-color: #3a0ca3;
+  cursor: pointer;
+}
+
+.interface-page .button-start .icon-restart {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+.interface-page .display-game {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.interface-page .display-game .tile {
+  width: 250px;
+  height: 250px;
+  background-color: #4cc9f0;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+  /* animation: reveal 2s infinite alternate-reverse; */
+}
+
+/* .tile::after {
+  content: "";
+  width: 250px;
+  height: 250px;
+  background-color: #ffff;
+  position: relative;
+  display: block;
+  top: 10px;
+  left: 0;
+  border-radius: 15px;
+} */
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.level-easy,
+.level-normal,
+.level-hard {
+  display: none;
+}
+
+.match {
+  opacity: 1 !important;
+}
+
+.image {
+  opacity: 0;
+}
+
+.opened {
+  animation: reveal 1s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+/* animation */
+@keyframes reveal {
+  to {
+    opacity: 1;
+  }
+}

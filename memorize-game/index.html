@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Sansita:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="title-page">Memorize Game</h1>
+    </header>
+    <main class="index-page">
+        <section class="subtitle-section">
+            <p>Welcome to the '<strong>Memorize Game</strong>' Where You Can Test And Train Your Memorizing Skill.</p>
+        </section>
+        <section class="name-section">
+            <p>Enter Player's Name</p>
+            <input type="text" name="name" id="name" onchange="setName(event)" autocomplete="off" />
+        </section>
+        <section class="button-section">
+            <div class="button-start" id="btn-start">
+                <span class="iconify icon-start" data-icon="fa-solid:play" style="color: #f72585;"></span>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script>
+        const playerDetail = {
+            name: "",
+            difficulty: "",
+        }
+
+        const btnStart = document.getElementById('btn-start')
+        btnStart.addEventListener('click', () => {
+            if (!playerDetail.name) return alert('Fill the player name')
+            sessionStorage.setItem('player', JSON.stringify(playerDetail));
+            window.location.replace('./difficulty.html');
+            // console.log(playerDetail)
+        })
+
+        const setName = (e) => {
+            playerDetail.name = e.target.value
+        }
+    </script>
+</body>
+
+</html>

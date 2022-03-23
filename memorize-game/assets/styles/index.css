@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4895ef;
+}
+
+header {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+header .title-page {
+  font-family: "Sansita", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 64px;
+}
+
+/* index page */
+.index-page {
+  width: 50vw;
+  margin: 20px auto;
+}
+
+.index-page section {
+  font-family: "Raleway", monospace;
+}
+
+.index-page .subtitle-section p {
+  margin: 30px;
+}
+
+.index-page .subtitle-section p,
+.index-page .name-section p {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+}
+
+.index-page .name-section input {
+  text-align: center;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.index-page .name-section {
+  margin-top: 50px;
+}
+
+.index-page .button-section {
+  margin: 0 auto;
+  width: 150px;
+  margin-top: 70px;
+}
+
+.index-page .button-start {
+  width: 150px;
+  height: 150px;
+  border-radius: 37px;
+  border: 5px solid #b5179e;
+  background-color: #3a0ca3;
+  cursor: pointer;
+}
+
+.index-page .button-start .icon-start {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-size: 28px;
+  padding: 12px;
+  border-radius: 12px;
+}
